@@ -1,0 +1,25 @@
+
+spring:
+  datasource:
+    hikari:
+      driverServiceMaster:
+        name: dev
+        jdbc-url: jdbc:mysql://:3307/?useUnicode=true&amp;characterEncoding=UTF-8
+        username: driver_admin
+        password: Driver!Admin01_Test!
+        pool-name: driverServiceMaster
+      driverServiceSlave:
+        name: dev
+        jdbc-url: jdbc:mysql://:3307/?useUnicode=true&amp;characterEncoding=UTF-8
+        username: driver_admin
+        password: Driver!Admin01_Test!
+        pool-name: driverServiceSlave
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+server:
+  port: 9090
+logging:
+  level:
+    com.example.mapper.*: debug
+    org.mybatis.spring.*: debug
